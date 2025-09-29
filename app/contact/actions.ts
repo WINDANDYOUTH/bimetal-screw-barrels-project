@@ -91,7 +91,7 @@ export async function handleContactForm(
   const { name, email, company, country, phone, application, message } = parsed.data;
 
   const MAX_BYTES = 5 * 1024 * 1024;
-  let attachments: {
+  const attachments: {
     filename: string;
     content: string;
     contentType?: string;
@@ -160,5 +160,6 @@ export async function handleContactForm(
     };
   }
 }
+
 
 
