@@ -1,0 +1,21 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Factory floor illustration">
+  <defs>
+    <linearGradient id="factory-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="32" fill="url(#factory-bg)" />
+  <g fill="#38bdf8" fill-opacity="0.2">
+    <rect x="140" y="240" width="210" height="320" rx="18" />
+    <rect x="380" y="210" width="240" height="360" rx="18" />
+    <rect x="660" y="230" width="240" height="340" rx="18" />
+    <rect x="940" y="200" width="180" height="380" rx="18" />
+  </g>
+  <g stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 520 H1040" />
+    <path d="M220 280 L280 280 L300 360 L200 360 Z" />
+    <path d="M460 260 L520 260 L540 340 L440 340 Z" />
+    <path d="M740 300 L820 300 L840 380 L720 380 Z" />
+  </g>
+</svg>

@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-page: #f3f6fb;
+  --color-surface: #ffffff;
+  --color-navy: #0b3c7d;
+  --color-navy-dark: #072d5c;
+  --color-steel: #1f2937;
+  --color-gray: #4b5563;
+  --color-light-gray: #e2e8f0;
+  --color-accent: #f97316;
+  --color-accent-alt: #22c55e;
+  --radius-lg: 24px;
+  --shadow-soft: 0 18px 38px rgba(15, 41, 70, 0.12);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--color-page);
+  --color-foreground: var(--color-steel);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-page);
+    color: var(--color-steel);
+    font-family: var(--font-geist-sans), "Inter", "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: rgba(11, 60, 125, 0.16);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .max-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .max-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .bg-brand-navy {
+    background-color: var(--color-navy);
+  }
+
+  .bg-brand-navy-dark {
+    background-color: var(--color-navy-dark);
+  }
+
+  .bg-brand-surface {
+    background-color: var(--color-surface);
+  }
+
+  .text-brand-navy {
+    color: var(--color-navy);
+  }
+
+  .text-brand-gray {
+    color: var(--color-gray);
+  }
+
+  .text-brand-steel {
+    color: var(--color-steel);
+  }
+
+  .shadow-brand {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .rounded-brand {
+    border-radius: var(--radius-lg);
+  }
 }
