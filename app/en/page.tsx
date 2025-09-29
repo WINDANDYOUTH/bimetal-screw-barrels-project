@@ -249,9 +249,7 @@ export default async function EnglishHomePage() {
 
       {/* JSON-LD Structured Data */}
       <script
-        type="application/ld+json"
-        // @ts-expect-error - embedding JSON-LD script
-        dangerouslySetInnerHTML={{
+        type="application/ld+json"        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -274,6 +272,7 @@ export default async function EnglishHomePage() {
     </main>
   );
 }
+
 
 
 
