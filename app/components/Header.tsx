@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -60,7 +60,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <LanguageSwitcher />
+          <Suspense fallback={null}><LanguageSwitcher /></Suspense>
           <Link
             href="/contact"
             className="rounded-full bg-[rgba(249,115,22,0.95)] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-400"
@@ -112,7 +112,7 @@ export function Header() {
               ))}
             </nav>
             <div className="flex items-center justify-between">
-              <LanguageSwitcher />
+              <Suspense fallback={null}><LanguageSwitcher /></Suspense>
               <Link
                 href="/contact"
                 onClick={closeMenu}
@@ -127,4 +127,6 @@ export function Header() {
     </header>
   );
 }
+
+
 

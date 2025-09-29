@@ -1,3 +1,4 @@
+﻿import { Suspense } from "react";
 import Link from "next/link";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -93,7 +94,7 @@ export function Footer() {
             </Link>
           </div>
           <div className="pt-2">
-            <LanguageSwitcher />
+            <Suspense fallback={null}><LanguageSwitcher /></Suspense>
           </div>
         </div>
       </div>
@@ -116,3 +117,4 @@ export function Footer() {
     </footer>
   );
 }
+
